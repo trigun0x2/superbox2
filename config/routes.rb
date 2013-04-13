@@ -1,13 +1,17 @@
 Superbox2::Application.routes.draw do
+  get "notes/new"
+
   get "box/index"
 
   resources :pictures
   resources :users
   resources :sessions
+  resources :box
 
   root to: "users#index"
 
   match '/login', to: 'sessions#new', :as => "log_in"
+  match '/box', to: 'box#index', :as => "box"
 
 
   # The priority is based upon order of creation:
