@@ -1,7 +1,7 @@
 Superbox2::Application.routes.draw do
+  get "box/index"
+
   resources :pictures
-
-
   resources :users
   resources :sessions
 
